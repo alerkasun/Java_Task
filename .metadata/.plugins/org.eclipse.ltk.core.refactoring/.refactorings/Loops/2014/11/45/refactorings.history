@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename method &apos;loop.Loop.Reverse(...)&apos; to &apos;reverse&apos;&#x0A;- Original project: &apos;Loops&apos;&#x0A;- Original element: &apos;loop.Loop.Reverse(...)&apos;&#x0A;- Renamed element: &apos;loop.Loop.reverse(...)&apos;&#x0A;- Update references to refactored element" delegate="false" deprecate="false" description="Rename method &apos;Reverse&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.method" input="/src&lt;loop{Loop.java[Loop~Reverse~I" name="reverse" references="true" stamp="1415122609710" version="1.0"/>
+</session>

@@ -1,0 +1,13 @@
+package com;
+import java.util.Scanner;
+
+public class Number1 {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a,b;
+        System.out.print("Введите a : ");
+        if(sc.hasNextInt())
+          a = sc.nextInt(); 
+        System.out.print(a);
+	     }
+	 }

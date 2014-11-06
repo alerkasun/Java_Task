@@ -1,0 +1,20 @@
+package com;
+
+import java.util.Scanner;
+
+public class cycle2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int a = 0;
+        System.out.print("Введите a : ");
+        a = sc.nextInt(); 
+        if (a < 2) {
+        	System.out.println("NO");
+        }
+        for (int i = 2; i*i <= a; i++)
+            if (a % i == 0) {
+            	System.out.println("YES");
+            }
+
+
+}}

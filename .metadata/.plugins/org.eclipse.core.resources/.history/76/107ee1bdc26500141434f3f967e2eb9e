@@ -1,0 +1,13 @@
+import javax.swing.JButton;
+import javax.swing.JPanel;
+
+
+public class GButtons extends JPanel {
+
+	JButton btn1 = null;
+	
+	public GButtons() {
+		
+	}
+	
+}

@@ -1,0 +1,17 @@
+package lesson;
+
+import static org.junit.Assert.*;
+import loop.Loop;
+
+import org.junit.Test;
+
+public class TestLesson {
+
+	@Test
+	public void testKonkat() 
+	{
+		int[] res = Lesson.konkat_array(res, res);
+		assertEquals("Summ = 2450 Quantity = 49", res);
+	}
+
+}

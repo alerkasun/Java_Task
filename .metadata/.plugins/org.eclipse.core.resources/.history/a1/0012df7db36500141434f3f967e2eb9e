@@ -1,0 +1,8 @@
+
+public class Calcurator {
+		public static void main(String[] args) 
+		{
+			double value1 = 0.0;
+			new GFrame();
+		}
+	}

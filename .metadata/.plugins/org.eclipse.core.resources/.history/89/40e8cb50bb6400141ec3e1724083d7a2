@@ -1,0 +1,15 @@
+package operators;
+
+public class Operators {
+	public static int count(int a, int b){
+		int sum = 0;
+		if(a % 2 == 0){
+			sum =a * b;
+		}
+		else{
+			sum = a + b;
+		}
+		return sum;
+		
+	}
+}

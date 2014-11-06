@@ -1,0 +1,18 @@
+package operators;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+import func.Function;
+
+public class OperatorsTest {
+
+	@Test
+	public void testOperatorsCount() 
+	{
+		int res = Operators.count(3, 5); 
+		assertEquals(, res);
+	}
+
+}

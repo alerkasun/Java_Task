@@ -1,0 +1,21 @@
+package loop;
+
+public class Loop {
+	public static String even()
+	{
+		String result="";
+		int sum=0;
+		int quantity=0;
+		for(int i=1;i<=99;i++)
+		{
+			if(i%2==0)
+			{
+				sum+=i;
+				quantity+=1;
+			}
+			
+		}
+		return result="Summ = :" + sum + "" , quantity":" +quantity;
+	}
+
+}

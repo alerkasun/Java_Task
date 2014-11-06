@@ -1,0 +1,21 @@
+package com;
+
+import java.util.Scanner;
+
+public class Number2 {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = 0, y = 0;
+        System.out.print("Введите a : ");
+          x = sc.nextInt(); 
+        System.out.print("Введите b : ");
+          b = sc.nextInt(); 
+          if(a / 2 == 0){
+        	   sum = a + b;
+        	   System.out.print (sum);
+          }else{
+        	  sum = a * b;
+        	  System.out.print (sum);
+          }
+	     }
+}

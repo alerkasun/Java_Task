@@ -1,0 +1,19 @@
+package arrays;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class ArrayTest {
+
+	@Test
+	public void test_0() 
+	{
+		int []a = {0};
+		ArrayTest.array[0];
+
+	}
+
+}
+
+

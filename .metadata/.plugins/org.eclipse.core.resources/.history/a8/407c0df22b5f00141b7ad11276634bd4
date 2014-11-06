@@ -1,0 +1,30 @@
+package com;
+
+import java.util.Scanner;
+
+public class Number2 {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int x = 0, y = 0;
+        System.out.print("Введите x координту : ");
+          x = sc.nextInt(); 
+        System.out.print("Введите y координату : ");
+          y = sc.nextInt(); 
+          if(x > 0 && y > 0 ){
+        	  System.out.print("Первая четверть ");
+          }
+          if(x < 0 && y > 0 ){
+        	  System.out.print("Вторая четверть ");
+          }
+          if(x < 0 && y < 0 ){
+        	  System.out.print("Третья четверть ");
+          }
+          if(x > 0 && y < 0 ){
+        	  System.out.print("Четвертая четверть ");
+          }
+
+          else{
+        	  System.out.print("Точка в начала координат ");
+          }
+	     }
+}

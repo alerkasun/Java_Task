@@ -1,0 +1,15 @@
+package date;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TestDate {
+
+	@Test
+	public void testDate() {
+		String res = Date.dateByWords(1, 5, 2014);
+		assertArrayEquals({3, 4, 5, 6}, res);
+	}
+
+}

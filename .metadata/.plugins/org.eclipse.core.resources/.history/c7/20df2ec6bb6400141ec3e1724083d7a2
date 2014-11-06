@@ -1,0 +1,31 @@
+package operators;
+
+public class Operators {
+	public static int count(int a, int b){
+		int sum = 0;
+		if(a % 2 == 0){
+			sum =a * b;
+		}
+		else{
+			sum = a + b;
+		}
+		return sum;
+		
+	}
+	
+	public static int koordinats(int x, int y){
+		String otvet;
+		if(x > 1 && y > 1){
+			otvet = "First!";
+		}
+		if(x > 1 && y < 1){
+			otvet = "4!";
+		}
+		if(x < 1 && y < 1){
+			otvet = "4!";
+		}
+			
+		return otvet;
+		
+	}
+}

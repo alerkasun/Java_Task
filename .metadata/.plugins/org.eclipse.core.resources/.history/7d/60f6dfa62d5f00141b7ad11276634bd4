@@ -1,0 +1,26 @@
+package com;
+
+import java.util.Scanner;
+
+public class Number3 {
+	public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int a = 0, b=0, c = 0, sum = 0;
+        System.out.print("Введите a : ");
+        a = sc.nextInt(); 
+        if(a > 0){
+        	sum =+a;
+        }
+        System.out.print("Введите b : ");
+        b = sc.nextInt(); 
+        if(b > 0){
+        	sum =+a;
+        }
+        System.out.print("Введите c : ");
+        c = sc.nextInt();
+        if(c > 0){
+        	sum =+a;
+        }
+        System.out.print(sum);
+	}
+}

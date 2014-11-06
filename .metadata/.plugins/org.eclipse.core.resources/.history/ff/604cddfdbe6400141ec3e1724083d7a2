@@ -1,0 +1,19 @@
+package lesson;
+
+public class Lesson {
+//	public static int[] konkat_array(int []a, int []b){
+		public static int[] konkat_array(int {2, 3}, int []b){
+		int[] res=new int[a.length+b.length];
+		int i = 0;
+		for(i=0;i<a.length;i++)
+		{
+	 		res[i]=a[i];
+	 		}
+	 	for(int j=0;j<b.length;j++)
+	 	{
+	 		res[i+j]=b[j];
+	 	}
+	 	return res;
+		
+	}
+}

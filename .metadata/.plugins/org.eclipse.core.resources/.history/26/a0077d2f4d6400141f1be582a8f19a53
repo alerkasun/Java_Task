@@ -1,0 +1,13 @@
+package array;
+
+public class Array {
+	public static int minElement(int[] array){
+		int min = array[0];
+		for (int i: array) {
+			if (i < min) {
+				min = i;
+			}
+		}
+		return min;
+	}
+}

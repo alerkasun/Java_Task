@@ -1,0 +1,22 @@
+package com;
+
+import java.util.Scanner;
+
+public class cycle2 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int a = 0;
+        System.out.print("Введите a : ");
+        a = sc.nextInt(); 
+        if( a / a == 1 && a / 1 == a)
+        {
+        	System.out.println("Число простое");
+        }
+        else
+        {
+        	System.out.println("Число не простое");
+        }
+        	
+        
+	}
+}

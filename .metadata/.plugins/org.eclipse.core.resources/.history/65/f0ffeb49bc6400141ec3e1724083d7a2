@@ -1,0 +1,10 @@
+package lesson;
+
+public class Lesson {
+	public static int konkat_array(int []a, int []b){
+		int[] konkat = {};
+		return konkat;
+		
+	}
+
+}

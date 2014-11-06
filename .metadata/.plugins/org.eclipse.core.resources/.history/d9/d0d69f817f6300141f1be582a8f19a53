@@ -1,0 +1,14 @@
+package arrays;
+
+public class Array {
+
+	int [] а = new int[100];
+	for (int i = 0; i < 100; i++){
+		if(a[i]%2==0)
+	}
+	 
+
+
+}
+
+

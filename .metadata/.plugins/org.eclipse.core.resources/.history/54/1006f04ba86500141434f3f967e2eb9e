@@ -1,0 +1,7 @@
+impory java.util.Scanner
+public class Calcurator {
+		public static void main(String[] args) 
+		{
+			new GFrame();
+		}
+	}

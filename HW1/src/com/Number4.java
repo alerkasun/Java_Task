@@ -1,0 +1,30 @@
+package com;
+
+import java.util.Scanner;
+
+public class Number4 {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+        int a = 0, b = 0, c = 0, sum = 0, comp = 0;
+        System.out.print("Введите a : ");
+        a = sc.nextInt(); 
+        System.out.print("Введите b : ");
+        b = sc.nextInt(); 
+        System.out.print("Введите c : ");
+        c = sc.nextInt(); 
+        sum = a + b +c;
+        comp = a * b *c;
+        System.out.println("Сумма : " + sum);
+        System.out.println("Производение : " + comp);
+        if(sum > comp){
+        	sum = sum + 3;
+        }
+        else{
+        	comp = comp + 3;
+        }
+        System.out.println("Прибавляем 3 ");
+        System.out.println("Сумма : " + sum);
+        System.out.println("Производение : " + comp);
+	}
+}
+
