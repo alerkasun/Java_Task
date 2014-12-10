@@ -2,6 +2,8 @@ package array;
 
 import static org.junit.Assert.*;
 
+import java.util.Arrays;
+
 import org.junit.Ignore;
 import org.junit.Test;
 
@@ -112,8 +114,7 @@ public class TestArray {
 		int res = Array.maxIndexElement(new int[] {1000, 90, 225, -9});
 		assertEquals(0, res);
 	}
-	
-	
+
 	@Test(expected = IllegalArgumentException.class)
 	public void testMinIndexElementNull() {
 		Array.maxElement(null);
@@ -137,12 +138,60 @@ public class TestArray {
 		int res = Array.minIndexElement(new int[] {1, 9, 2});
 		assertEquals(0, res);
 	}
+	@Test
+	public void testsumOddElementOneElement() {
+		int res = Array.getSum(new int[] {1});
+		assertEquals(0, res);
+	}
+	@Test
+	public void testsumOddElementTwoElement() {
+		int res = Array.getSum(new int[] {1, 2});
+		assertEquals(2, res);
+	}
+	@Test
+	public void testsumOddElementTheeElement() {
+		int res = Array.getSum(new int[] {1, 2, 3});
+		assertEquals(2, res);
+	}
 	
 	@Test
-	@Ignore
-	public void testsumOddElement() {
-		int res = Array.sumOddElement(new int[] {1, 9, 2, 5, 7, 1, 1});
-		System.out.println(res);
+	public void testsumOddElementNegative() {
+		int res = Array.getSum(new int[] {1, 2, 3, -4});
+		assertEquals(-2, res);
+	}
+	@Test
+	public void testsumOddElementNull() {
+		int res = Array.getSum(new int[] {1, 0, 3, 0});
 		assertEquals(0, res);
+	}
+	@Test
+	public void testreverse2Elements() {
+		int[] res = Array.reverse(new int[]{1, 5});
+		System.out.println( Arrays.toString( res ) );
+		assertTrue(Arrays.equals(res, new int[]{5,1}));
+	}
+	@Test
+	public void testreverseTheeElements() {
+		int[] res = Array.reverse(new int[]{1, 5, 9});
+		System.out.println( Arrays.toString( res ) );
+		assertTrue(Arrays.equals(res, new int[]{9, 5, 1}));
+	}
+	
+	@Test
+	public void testreverseFourElements() {
+		int[] res = Array.reverse(new int[]{1, 5, 9, 98});
+		System.out.println( Arrays.toString( res ) );
+		assertTrue(Arrays.equals(res, new int[]{98, 9, 5, 1}));
+	}
+	@Test
+	public void testreverseAllOne() {
+		int[] res = Array.reverse(new int[]{1, 1, 1, 1});
+		System.out.println( Arrays.toString( res ) );
+		assertTrue(Arrays.equals(res, new int[]{1, 1, 1, 1}));
+	}
+	@Test
+	public void testreverseAllElementNegative() {
+		int[] res = Array.reverse(new int[]{-1, -9, -15, -61});
+		assertTrue(Arrays.equals(res, new int[]{-61, -15, -9, -1}));
 	}
 }

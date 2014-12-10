@@ -1,0 +1,11 @@
+package production;
+
+public class Main {
+
+	public static void main(String[] args) {
+		int [] arr = {1, 2, 3};
+		AList0 aa = new AList0(arr);
+		System.out.println(aa.size());
+	}
+
+}

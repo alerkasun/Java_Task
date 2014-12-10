@@ -73,16 +73,46 @@ public class Array {
 		return minIndex;
 		}
 	
-	public static int sumOddElement(int[] array){
-		int sum = 0;
-		for(int i=0;i<array.length;i++){
-			if (array[i] % 2 ==0)
-			sum += i;
-		}
-		return sum;
-		
-	}
+	 public static int sumOddElement(int[] array)
+	    {
+	        int sum = 0;
+
+	        for (int i = 1; i < array.length; i += 2)
+	            sum += array[i];
+
+	        return sum;
+	    }
+
+	  public static int getSum(int[] array)
+	    {
+	        int sum = 0;
+	        for (int i = 1; i < array.length; i += 2)
+	            sum += array[i];
+	        return sum;
+	    }
+
 	
+	public static int[] reverse(int[] array)
+    {
+        int[] newArray = new int[array.length];
+        for (int i = 0; i < array.length; ++i)
+            newArray[i] = array[array.length - i - 1];
+        return newArray;
+    }
+	
+	public static int getNumber(int[] array)
+    {
+        int number = 0;
+
+        for (int i : array)
+        {
+            if (i % 2 != 0)
+                ++number;
+        }
+
+        return number;
+    }
+
 }
 
 

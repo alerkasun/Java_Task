@@ -1,0 +1,529 @@
+package production;
+
+public class AList2 implements  EList
+{
+	private int[] massiv = new int[100];
+	private int indexmas = 0;
+	private int start = 0;
+	private int end = 0;
+	
+	public void EList (int[] array)
+	{
+		init(array);
+	} 
+	
+	AList2() {
+		start = (massiv.length / 2);
+		end = massiv.length - start;
+	}
+	
+	public void init(int[] array)
+	{
+		indexmas = array.length;
+		for (int i=0; i<indexmas; i++)
+		{
+			massiv[i] = array[i];
+		}
+	}
+	
+	
+	public int[] toArray()
+	{
+		int[] array = new int[indexmas];
+		for (int i=0; i<indexmas; i++)
+		{
+			array[i] = massiv[i];
+		}
+		return array;
+	}
+	
+	public void addStart (int a)
+	{
+		if (indexmas == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		massiv[start] = a;
+		start--;
+
+	}
+
+	
+	public void addPos (int a, int pos)
+	{
+		if (indexmas == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=indexmas; i>=pos; i--)
+			{
+				massiv[i+1] = massiv[i];
+			}
+			massiv[pos] = a;
+			indexmas++;
+		}
+	}
+	
+	public void addEnd (int a)
+	{
+		if (indexmas == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		end++;
+		massiv[end] = a;
+	}
+	
+	public void delStart ()
+	{
+		if (indexmas == 0)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=0; i<indexmas; i++)
+			{
+				massiv[i] = massiv[i+1];
+			}
+			indexmas--;
+		}
+	}
+	
+	public void delPos (int a, int pos)
+	{
+		if (indexmas == 0)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=pos; i>indexmas; i++)
+			{
+				massiv[i] = massiv[i+1];
+			}
+			indexmas--;
+		}
+	}
+	
+	public void delEnd ()
+	{
+		if (indexmas == 0)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			indexmas--;
+		}
+	}
+	
+	public void iinit(int[] array)
+	{
+		if (array == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			start = (massiv.length-array.length)/2;
+			end = start + array.length;
+			int ii = start;
+			for (int i=0; i<array.length; i++)
+			{
+				massiv[ii] = array[i];
+				ii++;
+			}
+		}
+	}
+	
+	public int[] itoArray()
+	{
+		int size = end - start;
+		int[] array = new int[size];
+		int ii = start;
+		for (int i=0; i<size; i++)
+		{
+			array[i] = massiv[ii];
+			ii++;
+		}
+		return array;
+	}
+	
+	
+	public void iaddStart (int a)
+	{
+		if (end - start + 1 == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			massiv[start-1] = a;
+			start--;
+		}
+	}
+	
+	public void iaddPos (int a, int pos)
+	{
+		if (end - start + 1 == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int n = massiv.length-1-end;
+			if (start >= n)
+			{
+				int ii = start;
+				for (int i=ii-1; i<ii+pos; i++)
+				{
+					massiv[i] = massiv[i+1];
+				}
+				massiv[ii+pos] = a;
+				start--;
+			}
+			else
+			{
+				int ii = start;
+				for (int i=end+1; i<ii+pos; i--)
+				{
+					massiv[i] = massiv[i-1];
+				}
+				massiv[ii+pos] = a;
+				end++;
+			}
+		}
+	}
+	
+	public void iaddEnd (int a)
+	{
+		if (end == 100)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			massiv[end++] = a;
+		}
+	}
+	
+	public void idelStart ()
+	{
+		start++;
+	}
+	
+	public void idelPos (int a, int pos)
+	{
+		int n = massiv.length-1-end;
+		if (start >= n)
+		{
+			int ii = start;
+			for (int i=ii+pos; i>ii; i--)
+			{
+				massiv[i] = massiv[i-1];
+			}
+			start++;
+		}
+		else
+		{
+			int ii = start;
+			for (int i=ii+pos; i<end; i++)
+			{
+				massiv[i] = massiv[i+1];
+			}
+			end--;
+		}
+	
+	}
+	
+	public void idelEnd ()
+	{
+		end--;
+	}
+	
+	public int minElementMass () 
+	{
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int vivod = massiv[start];
+			for (int i=start; i<end; i++) 
+			{
+				if (vivod > massiv[i])
+				{
+					vivod = massiv[i];
+				}
+			}
+			
+			return vivod;
+		}
+    }
+	
+	public int maxElementMass ()  
+	{
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int vivod = massiv[start];
+			for (int i=start; i<end; i++) 
+			{
+				if (vivod < massiv[i]) 
+				{
+					vivod = massiv[i];
+				}
+			}
+			
+			return vivod;
+		}
+    }
+	
+	public int indexMinElement () 
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int vivod = massiv[start];
+			int index = 0;
+			for (int i=start; i<end; i++) 
+			{
+				if (vivod > massiv[i])
+				{
+					vivod = massiv[i];
+					index = i;
+				}
+			}
+			
+			vivod = index;
+			return vivod;
+		}
+    }
+	
+	public int indexMaxElement () 
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int vivod = 0;
+			int index = 0;
+			for (int i=start; i<end; i++) 
+			{
+				if (vivod < massiv[i])
+				{
+					vivod = massiv[i];
+					index = i;
+				}
+			}
+			
+			vivod = index;
+			return vivod;
+		}
+    }
+	
+	public int sumElementNeChetIndex ()
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int vivod = 0;
+			for (int i=start; i<end; i++) 
+			{
+				if (i%2 != 0)
+				{
+					vivod = vivod + massiv[i];
+				}
+			}
+			
+			return vivod;
+		}
+    }
+	
+	
+	public void reverseMass()
+	{
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=start; i<end-start/2; i++)
+			{
+				int temp = massiv[i];
+				massiv[i] = massiv[end-start-i-1];
+				massiv[end-start-i-1] = temp;
+			}
+		}
+	} 
+	
+	public int kolvoNeChetElement () 
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int index = 0;
+			for (int i=0; i<massiv.length; i++) 
+			{
+				if (massiv[i]%2 != 0)
+				{
+					index++;
+				}
+			}
+			
+			return index;
+		}
+    }
+	
+	
+	public void polovinaMass ()
+	{
+		if (massiv == null || massiv.length%2 != 0)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=0; i<massiv.length/2; i++)
+			{
+				int temp = massiv[i];
+				massiv[i] = massiv[massiv.length/2+i];
+				massiv[massiv.length/2+i] = temp;
+			}
+		}
+	}
+	
+	public void sortPuzir () 
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int ii = 0;
+			while (true)
+			{
+				int in = 0;
+				for (int i=0; i<massiv.length-1; i++) 
+				{
+					if (massiv[i] > massiv[i+1]) 
+					{
+						ii = massiv[i];
+						massiv[i] = massiv[i+1];
+						massiv[i+1] = ii;
+						in = 1;
+					}
+				}
+				if (in == 0)
+				{
+					break;
+				}
+			}
+		}
+    }
+	
+	
+	public void sortSelect () 
+    {
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			int i=0;
+			int p = 0;
+			int ii = 0;
+			int cc = 0;
+			int x = 0;
+			int index = 0;
+			
+			while (true)
+			{
+				for (i=p; i<massiv.length; i++) 
+				{
+					if (i == p)
+					{
+						cc = massiv[p];
+					}
+					if (cc > massiv[i])
+					{
+						cc = massiv[i];
+						index = i;
+					}
+				}
+				int s = 0;
+				for (i=0; i<massiv.length-1; i++) 
+				{
+					if (massiv[i] < massiv[i+1])
+					{
+						s++;
+					}
+				}
+				if (s == massiv.length-1)
+				{
+					break;
+				}
+				ii = massiv[x];
+				massiv[x] = massiv[index];
+				massiv[index] = ii;
+				p++;
+				x++;
+			}
+		}
+    }
+	
+	
+	
+	public void sortInsert ()
+    {	
+		if (massiv == null)
+		{
+			throw new IllegalArgumentException();
+		}
+		else
+		{
+			for (int i=0; i<massiv.length; i++)
+			{
+				for (int i2=0; i2<=i; i2++)
+				{
+					if (massiv[i] < massiv[i2])
+					{
+						//System.out.println ("ïðîâåðêà ---  " + i +" < "+i2 );
+						int m = massiv[i2];
+						int m2 = massiv[i];
+						for (int i3=massiv.length-1; i3>=0; i3--)
+						{
+							if(i3 <= i && i3 >= i2+1)
+							{
+								massiv[i3] = massiv[i3-1];
+							}
+						}
+						massiv[i2] = m2;
+						massiv[i2+1] = m;	
+					}
+				}
+			}
+		}
+    }
+}

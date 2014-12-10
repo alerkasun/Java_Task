@@ -1,0 +1,57 @@
+11-21 10:35:44 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PERSON" not found; SQL statement:
+SELECT * FROM person  [42102-182]
+11-21 10:36:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+INSERT INTO TEST VALUES(default,'HELLO') [42102-182]
+11-21 10:37:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+SELECT * FROM TEST [42102-182]
+11-21 10:38:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "RESULTS" not found; SQL statement:
+SELECT eventID FROM RESULTS [42102-182]
+11-21 10:39:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+SELECT * FROM TEST [42102-182]
+11-21 10:40:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+SELECT * FROM TEST [42102-182]
+11-21 10:41:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+SELECT * FROM TEST [42102-182]
+11-21 10:41:45 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+select * FROM test [42102-182]
+11-21 10:42:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+select * FROM test [42102-182]
+11-21 10:42:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "TEST" not found; SQL statement:
+select * FROM test [42102-182]
+11-21 10:50:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "lastname" not found [42122-182]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3120)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3208)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:302)
+	at SQL.main(SQL.java:23)
+11-21 10:51:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Column "firstname" not found [42122-182]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:345)
+	at org.h2.message.DbException.get(DbException.java:179)
+	at org.h2.message.DbException.get(DbException.java:155)
+	at org.h2.jdbc.JdbcResultSet.getColumnIndex(JdbcResultSet.java:3120)
+	at org.h2.jdbc.JdbcResultSet.get(JdbcResultSet.java:3208)
+	at org.h2.jdbc.JdbcResultSet.getString(JdbcResultSet.java:302)
+	at SQL.main(SQL.java:23)
+11-21 10:56:49 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PERSON" not found; SQL statement:
+SELECT * FROM PERSON  [42102-182]
+11-21 10:57:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PERSON" not found; SQL statement:
+SELECT * FROM INFORMATION_SCHEMA.PERSON  [42102-182]
+11-21 10:57:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLException: Table "PERSON" not found; SQL statement:
+SELECT * FROM PERSON  [42102-182]

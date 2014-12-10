@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persons>
+    <person>
+        <id>0</id><firstName>Evgeniy</firstName> <lastName>Pravda</lastName><age>23</age>
+    </person>
+ <person>
+        <id>1</id><firstName>Irina</firstName> <lastName>Galata</lastName><age>23</age>
+    </person>
+ <person>
+        <id>2</id><firstName>Alexandr</firstName> <lastName>Shegeda</lastName><age>23</age>
+    </person>
+ <person>
+        <id>3</id><firstName>Oleg</firstName> <lastName>Gudeichuk</lastName><age>23</age>
+    </person>
+ <person>
+        <id>4</id><firstName>Valera</firstName> <lastName>Sandulov</lastName><age>23</age>
+    </person>
+ <person>
+        <id>5</id><firstName>Max</firstName> <lastName>Max</lastName><age>23</age>
+    </person>
+ <person>
+        <id>6</id><firstName>Egor</firstName> <lastName>Bojko</lastName><age>23</age>
+    </person>
+</persons>

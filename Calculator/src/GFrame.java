@@ -11,13 +11,7 @@ public class GFrame extends JFrame
 		setTitle("Java Swing Calculator");
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setBounds(300, 300, 500, 450);
-		setLayout(new GridLayout(2, 1));
-		
-		Box box = Box.createVerticalBox();
-		GPanel panel = new GPanel();
-		box.add(panel);
-		box.add(new GButtons(panel.getJTextField()));
-		add(box);
+		add( new GPanel() );
 		setVisible(true);
 	}
 }

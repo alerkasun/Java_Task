@@ -1,0 +1,290 @@
+package production;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class EListTest 
+{
+//	EList ee = new AList0();
+//	EList ee = new AList1();
+	EList ee = new AList2();
+	
+	//=========================================
+	// size
+	//=========================================
+	@Test
+	public void testSize_null() 
+	{
+		int[] ini = null;
+		ee.init(ini);
+		int act = ee.size();
+		assertEquals(0, act);
+	}
+	@Test
+	public void testSize_0() 
+	{
+		int[] ini = {};
+		ee.init(ini);
+		int act = ee.size();
+		assertEquals(0, act);
+	}
+	@Test
+	public void testSize_1() 
+	{
+		int[] ini = {10};
+		ee.init(ini);
+		int act = ee.size();
+		assertEquals(1, act);
+	}
+	@Test
+	public void testSize_2() 
+	{
+		int[] ini = {10,20};
+		ee.init(ini);
+		int act = ee.size();
+		assertEquals(2, act);
+	}
+	@Test
+	public void testSize_many() 
+	{
+		int[] ini = {10,20,30,77,11,97,24};
+		ee.init(ini);
+		int act = ee.size();
+		assertEquals(7, act);
+	}
+
+	//=========================================
+	// toArray
+	//=========================================
+	@Test
+	public void testToArray_null() 
+	{
+		int[] ini = null;
+		ee.init(ini);
+		int[] act = ee.toArray();
+		int[] exp = {};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testToArray_0() 
+	{
+		int[] ini = {};
+		ee.init(ini);
+		int[] act = ee.toArray();
+		int[] exp = {};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testToArray_1() 
+	{
+		int[] ini = {10};
+		ee.init(ini);
+		int[] act = ee.toArray();
+		int[] exp = {10};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testToArray_2() 
+	{
+		int[] ini = {10,20};
+		ee.init(ini);
+		int[] act = ee.toArray();
+		int[] exp = {10,20};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testToArray_many() 
+	{
+		int[] ini = {10,20,30,77,11,97,24};
+		ee.init(ini);
+		int[] act = ee.toArray();
+		int[] exp = {10,20,30,77,11,97,24};
+		assertArrayEquals(exp, act);
+	}
+
+	//=========================================
+	// addStart
+	//=========================================
+	@Test
+	public void testAddStart_null() 
+	{
+		int[] ini = null;
+		ee.init(ini);
+		ee.addStart(7);
+		assertEquals(1, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddStart_0() 
+	{
+		int[] ini = {};
+//		ee.init(ini);
+		ee.addStart(7);
+		assertEquals(1, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddStart_1() 
+	{
+		int[] ini = {10};
+		ee.init(ini);
+		ee.addStart(7);
+		assertEquals(2, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7,10};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddStart_2() 
+	{
+		int[] ini = {10,20};
+		ee.init(ini);
+		ee.addStart(7);
+		assertEquals(3, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7,10,20};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddStart_many() 
+	{
+		int[] ini = {10,20,30,77,11,97,24};
+		ee.init(ini);
+		ee.addStart(7);
+		assertEquals(8, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7,10,20,30,77,11,97,24};
+		assertArrayEquals(exp, act);
+	}
+
+	//=========================================
+	// addEnd
+	//=========================================
+	@Test
+	public void testAddEnd_null() 
+	{
+		int[] ini = null;
+		ee.init(ini);
+		ee.addEnd(7);
+		assertEquals(1, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddEnd_0() 
+	{
+		int[] ini = {};
+		ee.init(ini);
+		ee.addEnd(7);
+		assertEquals(1, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddEnd_1() 
+	{
+		int[] ini = {10};
+		ee.init(ini);
+		ee.addEnd(7);
+		assertEquals(2, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {10,7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddEnd_2() 
+	{
+		int[] ini = {10,20};
+		ee.init(ini);
+		ee.addEnd(7);
+		assertEquals(3, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {10,20,7};
+		assertArrayEquals(exp, act);
+	}
+	@Test
+	public void testAddEnd_many() 
+	{
+		int[] ini = {10,20,30,77,11,97,24};
+		ee.init(ini);
+		ee.addEnd(7);
+		assertEquals(8, ee.size());
+		int[] act = ee.toArray();
+		int[] exp = {10,20,30,77,11,97,24,7};
+		assertArrayEquals(exp, act);
+	}
+
+	
+	@Test
+	public void testAddPos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelStart() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelEnd() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testDelPos() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMinValue() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMaxValue() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMinIndex() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testMaxIndex() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testReverse() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testChangeparts() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSortBubble() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSortSelect() {
+		fail("Not yet implemented");
+	}
+
+	@Test
+	public void testSortInsert() {
+		fail("Not yet implemented");
+	}
+
+}

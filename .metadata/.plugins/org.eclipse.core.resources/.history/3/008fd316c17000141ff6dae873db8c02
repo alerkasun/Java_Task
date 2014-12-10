@@ -1,0 +1,139 @@
+package production;
+
+public class AList0 implements EList
+{
+	private int [] arr = null;
+	AList0()
+	{
+		arr = new int[0];
+	}
+	
+	AList0(int [] array)
+	{
+		arr = array;
+	}
+	
+	
+	@Override
+	public int size() {
+		if (arr == null || arr.length == 0)
+		{
+			return 0;
+		}
+		return arr.length;
+	}
+
+	@Override
+	public void init(int[] ar) {
+		if(ar == null || ar.length == 0)
+		{
+			return;
+		}
+		arr = ar;
+		
+	}
+
+	@Override
+	public int[] toArray() {
+		if(arr == null || arr.length == 0)
+		{
+			return new int[0];
+		}
+		return arr;
+	}
+
+	@Override
+	public void addStart(int a) {
+		if(arr == null)
+		{
+			arr = new int[0];
+		}
+		int[] tmpArr = new int[size()+1];
+		
+	}
+
+	@Override
+	public void addEnd(int a) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void addPos(int a, int pos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delStart() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delEnd() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void delPos(int a, int pos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int minValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int maxValue() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int minIndex() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int maxIndex() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void reverse() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void changeparts() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sortBubble() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sortSelect() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void sortInsert() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

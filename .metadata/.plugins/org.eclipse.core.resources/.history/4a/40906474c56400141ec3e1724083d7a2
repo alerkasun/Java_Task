@@ -1,8 +1,0 @@
-package date;
-
-public class Date {
-	public status int dateByWords(int a, int b, int c){
-		
-	}
-
-}

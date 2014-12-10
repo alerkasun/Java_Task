@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;selenium-server-standalone-2.44.0.jar&apos; to &apos;lib&apos;" description="Move &apos;selenium-server-standalone-2.44.0.jar&apos; to &apos;lib&apos;" destination="lib" element1="selenium-server-standalone-2.44.0.jar" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1416825348599" updateReferences="true"/>
+</session>

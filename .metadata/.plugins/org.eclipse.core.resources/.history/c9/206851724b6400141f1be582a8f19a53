@@ -1,7 +1,0 @@
-package array;
-
-public class Array {
-	public static int minElement(Array){
-	
-	}
-}

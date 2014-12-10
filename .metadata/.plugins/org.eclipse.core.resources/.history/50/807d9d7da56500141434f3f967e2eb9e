@@ -1,8 +1,0 @@
-
-public class CalcuratorMain {
-	{
-		public static void main(String[] args) 
-		{
-			new GFrame();
-		}
-	}
